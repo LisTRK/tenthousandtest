@@ -12,10 +12,7 @@ const SearchBar = ({onSubmit}: SearchProps) => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const trimmedValue = searchValue.trim()
-        if (!trimmedValue.trim()) {
-            toast.error("Please enter your search query.");
-            return 
-        }
+        
         onSubmit(trimmedValue);
     }
 
